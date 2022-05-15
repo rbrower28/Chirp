@@ -1,13 +1,53 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block title %}
   Chirp ~ speak your mind!
 {% endblock %}
 
+
 {% block css_files %}
-    
+  <link rel="stylesheet" href="{% static 'ChirpApp/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'ChirpApp/includes/header.css' %}" />
+  <link rel="stylesheet" href="{% static 'ChirpApp/includes/navigation.css' %}" />
+  <link rel="stylesheet" href="{% static 'ChirpApp/includes/decoration.css' %}" />
+  <link rel="stylesheet" href="{% static 'ChirpApp/includes/post.css' %}" />
 {% endblock %}
 
+
 {% block content %}
-  <h1>Test!</h1>
+  {% include "ChirpApp/includes/header.html" %}
+  {% include "ChirpApp/includes/navigation.html" %}
+  {% include "ChirpApp/includes/decoration.html" %}
+  
+  <main>
+
+    <section class="post-write">
+      <h1>Have something to say?</h1>
+      <form>
+        <textarea name="new-post"
+                  id="write-space"
+                  class="bold"
+                  rows="4"
+                  maxlength="200"
+                  placeholder="I think that..." ></textarea>
+        <div class="form-lower">
+          <!-- <input type="radio"></input> -->
+          <span id="characters-left">200</span>
+          <button id="post-post">Chirp</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="post-list">
+      
+    </section>
+
+    <div class="spacer"></div>
+
+  </main>
+
+  <script src="{% static 'ChirpApp/scripts/characters.js' %}"></script>
+
 {% endblock %}

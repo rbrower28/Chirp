@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Noto+Serif:wght@700&family=Zen+Tokyo+Zoo&display=swap');
+
+.bold {
+  font-family: 'Noto Serif', serif;
+}
+
+.old {
+  font-family: 'Cormorant Upright', serif;
+}
+
+.wild {
+  font-family: 'Zen Tokyo Zoo', cursive;
+}

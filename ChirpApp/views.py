@@ -6,5 +6,5 @@ from django.urls import reverse
 
 def index(request):
     return render(request, 'ChirpApp/index.html', {
-
+        'user.exists': False
     })

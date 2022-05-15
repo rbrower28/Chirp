@@ -1,0 +1,28 @@
+
+.decor {
+  height: 100%;
+  width: 17%;
+  position: fixed;
+  z-index: 1;
+  top: 3rem;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.decor h3 {
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+.decor ul {
+  margin-right: 1.5rem;
+}
+
+.decor li {
+  border: 2px solid #7E4E7C;
+  border-radius: 10px;
+  margin: 1.5rem 0 0;
+  min-height: 5rem;
+  text-align: center;
+}

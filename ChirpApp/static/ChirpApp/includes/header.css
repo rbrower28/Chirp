@@ -1,0 +1,36 @@
+
+header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  background-color: #E8D9E7;
+  height: 3rem;
+}
+
+.main-logo,
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+header h2 {
+  margin: 0 .5rem 0 0;
+}
+
+.header-right a {
+  margin: 0 .5rem;
+}
+
+header img {
+  height: 18px;
+}

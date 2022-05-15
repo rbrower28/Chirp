@@ -1,0 +1,31 @@
+
+.nav-bar {
+  height: 100%;
+  width: 17%;
+  position: fixed;
+  z-index: 1;
+  top: 3rem;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.nav-box {
+  border: 3px solid #7E4E7C;
+  border-radius: 10px;
+  margin-left: 1.5rem;
+  padding: 1rem;
+}
+
+.nav-box h3 {
+  margin: 0 0 .5rem 0;
+}
+
+.nav-box ul {
+  padding-left: 20%;
+}
+
+.nav-box a:hover {
+  font-weight: bold;
+  color: #7E4E7C;
+}
