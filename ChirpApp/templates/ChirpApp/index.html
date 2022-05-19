@@ -33,7 +33,11 @@
                   maxlength="200"
                   placeholder="I think that..." ></textarea>
         <div class="form-lower">
-          <!-- <input type="radio"></input> -->
+          <div class="radio">
+            <label id="radbold" class="active"><input type="radio" class="bold" name="font" value="bold">Bold</label>
+            <label id="radold"><input type="radio" class="old" name="font" value="old">Old</label>
+            <label id="radwild"><input type="radio" class="wild" name="font" value="wild">Wild</label>
+          </div>
           <span id="characters-left">200</span>
           <button id="post-post">Chirp</button>
         </div>
@@ -49,5 +53,6 @@
   </main>
 
   <script src="{% static 'ChirpApp/scripts/characters.js' %}"></script>
+  <script src="{% static 'ChirpApp/scripts/fonts.js' %}"></script>
 
 {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  Login - Chirp
+{% endblock %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'ChirpApp/registration.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+  <section id="login">
+    <a href={% url 'home' %}>Back</a>
+    <h1>Login to Chirp</h1>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" name="submit">
+    </form>
+
+  </section>
+
+{% endblock %}

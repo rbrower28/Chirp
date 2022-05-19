@@ -31,6 +31,42 @@ form {
   justify-content: space-between;
 }
 
+.radio {
+  border: 3px solid #7E4E7C;
+  border-radius: 10px;
+  background-color: white;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.radio label {
+  height: 100%;
+  padding: 0 .5rem;
+  cursor: pointer;
+  font-size: 125%;
+  color: #7E4E7C;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio label.active {
+  background-color: #7E4E7C;
+  color: white;
+}
+
+.radio input {
+  display: none;
+}
+
+#radbold,
+#radold {
+  border-right: 3px solid #7E4E7C;
+}
+
 form span {
   font-size: 125%;
 }
@@ -43,6 +79,7 @@ form button {
   color: #7E4E7C;
   border: 3px solid #7E4E7C;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 form button:active {

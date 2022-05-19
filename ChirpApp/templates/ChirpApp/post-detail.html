@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  Post by {{ post.author }}
+{% endblock %}
+
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "ChirpApp/post-detail.css" %}" />
+  <link rel="stylesheet" href="{% static "ChirpApp/includes/header.css" %}" />
+  <link rel="stylesheet" href="{% static "ChirpApp/includes/navigation.css" %}" />
+  <link rel="stylesheet" href="{% static "ChirpApp/includes/decoration.css" %}" />
+{% endblock %}
+
+
+{% block content %}
+  {% include "ChirpApp/includes/header.html" %}
+  {% include "ChirpApp/includes/navigation.html" %}
+  {% include "ChirpApp/includes/decoration.html" %}
+
+  <main>
+    <a href="{% url 'home' %}">Back</a>
+
+    <section id="main-post">
+      <span>{{ post.date }}</span>
+      <h2>{{ post.content|linebreaks }}</h2>
+      <h3>{{ post.author }}</h3>
+    </section>
+
+    <section class="comment" id="comments">
+      <ul>
+        {% for comment in comments %}
+          <li>
+            <span>{{ comment.date }}</span>
+            <h2>{{ comment.content|linebreaks }}</h2>
+            <h3>{{ comment.author.username }}</h3>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="comment" id="comment-form">
+      <h2>Your Comment</h2>
+      <form action="{% url "post-detail-page" post.slug %}" method="POST">
+        {% csrf_token %}
+        {% for form_field in comment_form %}
+          <div class="form-control {% if form_field.errors %}invalid{% endif %}">
+            {{ form_field.label_tag }}
+            {{ form_field }}
+            {{ form_field.errors }}
+          </div>
+        {% endfor %}
+        <button>Chirp</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="{% static 'ChirpApp/scripts/characters.js' %}"></script>
+
+{% endblock %}
