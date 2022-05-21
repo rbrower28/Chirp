@@ -58,7 +58,7 @@ you can submit your own. When a valid comment is sumbitted,
 it is immediately placed at the bottom of the list, right
 above the form.
 
-# Login Page
+## Login Page
 
 This page uses a Django form model to populate a login
 form. On here you login to your account, and if the login
