@@ -26,8 +26,7 @@ refreshing the page.
 
 ## Code Demonstration and Walkthrough:
 
-(Not made yet)
-<!-- [Software Demo Video](http://youtube.link.goes.here) -->
+[Software Demo Video (on youtube)](https://youtu.be/mGlcEQ5RA6Q)
 
 # Web Pages
 
@@ -79,6 +78,5 @@ and your username is displayed on the header.
 # Future Work
 
 * Homepage sorting buttons
-* Dynamic decoration page (on right)
 * Add 'likes'
 * Account sign up page
