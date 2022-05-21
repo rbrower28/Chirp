@@ -18,9 +18,17 @@
     <a href={% url 'home' %}>Back</a>
     <h1>Login to Chirp</h1>
 
-    <form action="" method="POST">
+    <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
-      {{ form.as_p }}
+      {{ error }}
+      <p>
+        {{ form.username.label_tag }}
+        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="20" required id="id_username">
+      </p>
+      <p>
+        {{ form.password.label_tag }}
+        <input type="password" name="password" autocomplete="current-password" maxlength="20" required id="id_password">
+      </p>
       <input type="submit" name="submit">
     </form>
 

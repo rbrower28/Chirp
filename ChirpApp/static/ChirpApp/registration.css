@@ -1,10 +1,27 @@
 
-
+html {
+  background-color: #EFE6EF;
+}
 
 #login {
+  background-color: white;
   border: 3px solid #7E4E7C;
   border-radius: 10px;
   text-align: center;
+  margin: 2rem auto;
   padding: 2rem;
   max-width: 30rem;
+}
+
+.errorlist {
+  list-style-type: none;
+  color: red;
+  padding: 0;
+}
+
+p input {
+  all: unset;
+  border-bottom: 1px solid #7E4E7C;
+  padding: 2px;
+  max-width: 10rem;
 }

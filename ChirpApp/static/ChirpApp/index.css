@@ -24,14 +24,18 @@ form {
 }
 
 .form-lower {
-  margin: 1rem .5rem 0;
+  margin: 1rem .5rem 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.radio {
+.form-control:nth-child(3) {
+  display: inline-block;
+}
+
+#id_font {
   border: 3px solid #7E4E7C;
   border-radius: 10px;
   background-color: white;
@@ -40,30 +44,37 @@ form {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  max-width: fit-content;
 }
 
-.radio label {
+#id_font div {
   height: 100%;
-  padding: 0 .5rem;
-  cursor: pointer;
-  font-size: 125%;
-  color: #7E4E7C;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.radio label.active {
+#id_font label {
+  padding: 0 .5rem;
+  cursor: pointer;
+  font-size: 125%;
+  color: #7E4E7C;
+}
+
+#id_font div.active {
   background-color: #7E4E7C;
+}
+
+#id_font div.active label {
   color: white;
 }
 
-.radio input {
+#id_font input {
   display: none;
 }
 
-#radbold,
-#radold {
+#id_font div:nth-child(1),
+#id_font div:nth-child(2) {
   border-right: 3px solid #7E4E7C;
 }
 
@@ -87,7 +98,7 @@ form button:active {
   color: white;
 }
 
-#write-space {
+textarea {
   width: 96%;
   max-width: 96%;
   border: 2px solid #7E4E7C;
@@ -97,16 +108,31 @@ form button:active {
   font-size: 125%;
 }
 
-#write-space:focus {
+textarea:focus {
   overflow: hidden;
   outline:none;
 }
 
 .spacer {
-  height: 100rem;
+  height: 30rem;
 }
 
 h1 {
   text-align: center;
   margin: 0 0 1rem 0;
+}
+
+.post-list {
+  width: 80%;
+  margin: auto;
+}
+
+.post:nth-child(odd) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.post:nth-child(even) {
+  margin-right: 0;
+  margin-left: auto;
 }

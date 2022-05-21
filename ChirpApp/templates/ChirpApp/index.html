@@ -24,28 +24,34 @@
   <main>
 
     <section class="post-write">
-      <h1>Have something to say?</h1>
-      <form>
-        <textarea name="new-post"
-                  id="write-space"
-                  class="bold"
-                  rows="4"
-                  maxlength="200"
-                  placeholder="I think that..." ></textarea>
-        <div class="form-lower">
-          <div class="radio">
-            <label id="radbold" class="active"><input type="radio" class="bold" name="font" value="bold">Bold</label>
-            <label id="radold"><input type="radio" class="old" name="font" value="old">Old</label>
-            <label id="radwild"><input type="radio" class="wild" name="font" value="wild">Wild</label>
+      {% if user.is_authenticated %}
+        <h1>Have something to say?</h1>
+        <form action="{% url 'home' %}" method="post">
+          {% csrf_token %}
+          <div class="form-control {% if post_form.content.errors %}invalid{% endif %}">
+            {{ post_form.content.label_tag }}
+            {{ post_form.content }}
+            {{ post_form.content.errors }}
           </div>
-          <span id="characters-left">200</span>
-          <button id="post-post">Chirp</button>
-        </div>
-      </form>
-    </section>
+          <div class="form-lower">
+            <div class="form-control {% if post_form.font.errors %}invalid{% endif %}">
+              {{ post_form.font.label_tag }}
+              {{ post_form.font }}
+              {{ post_form.font.errors }}
+            </div>
+            <span id="characters-left">200</span>
+            <button id="post-post">Chirp</button>
+          </div>
+        </form>
+      {% else %}
+        <h1>Please <a href="{% url 'login' %}" id="h1login">login</a> to write a post.</h1>
+      {% endif %}
+      </section>
 
     <section class="post-list">
-      
+      {% for post in posts %}
+        {% include 'ChirpApp/includes/post.html' %}
+      {% endfor %}
     </section>
 
     <div class="spacer"></div>

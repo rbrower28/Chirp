@@ -34,3 +34,11 @@ header h2 {
 header img {
   height: 18px;
 }
+
+#h1login {
+  color: #7E4E7C;
+}
+
+#h1login:hover {
+  border-bottom: 3px solid #7E4E7C;
+}
