@@ -20,7 +20,7 @@
   padding: 1rem;
 }
 
-.post p {
+.post p:nth-child(2) {
   font-size: 70%;
 }
 

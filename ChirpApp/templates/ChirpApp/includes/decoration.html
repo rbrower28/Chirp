@@ -1,10 +1,10 @@
 <div class="decor">
   <h3>Popular users:</h3>
   <ul>
-    <li>mark</li>
-    <li>amy</li>
-    <li>ryan</li>
-    <li>john</li>
-    <li>tom</li>
+    {% for user in users %}
+    <li>
+      {{ user.username }}
+    </li>
+    {% endfor %}
   </ul>
 </div>
