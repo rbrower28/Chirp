@@ -1,10 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import View
-from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.views import LoginView, LogoutView
-from django.contrib.auth.models import User
 
 from .models import Post
 from .forms import CommentForm, LoginForm, PostForm
@@ -73,31 +71,11 @@ class SinglePostView(View):
         return render(request, "ChirpApp/post-detail.html", context)
 
 
-# def user_login(request):
-#     return render(request, 'ChirpApp/authentication/login.html', {})
-
-
 class UserLogin(LoginView):
     template_name = 'ChirpApp/registration/login.html'
     from_class = LoginForm
 
-    # def get_success_url(self):
 
-    #     return super().get_success_url()
-
-    # def post(self, request):
-    #     username = request.POST.get("username")
-    #     password = request.POST.get("password")
-    #     user = authenticate(request, username=username, password=password)
-
-    #     if user is not None:
-    #         login(request, user)
-    #     else:
-    #         print("oops")
-    #         context = {"error": "Invalid username or password"}
-    #         return render(request, 'ChirpApp/registration/login.html', context)
-
-
-# class UserLogout(LogoutView):
-#     template_name = 'ChirpApp/temlpates/index.html'
+class UserLogout(LogoutView):
+    template_name = 'ChirpApp/templates/index.html'
     

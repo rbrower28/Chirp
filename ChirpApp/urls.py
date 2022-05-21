@@ -8,5 +8,5 @@ urlpatterns = [
     path("", views.HomePageView.as_view(), name="home"), #/
     path("<slug:slug>", views.SinglePostView.as_view(), name="post-detail-page"), #/12345
     path("login/", views.LoginView.as_view(), name="login"),
-    # path("", views.LogoutView.as_view(), name="logout")
+    path("logout/", views.LogoutView.as_view(), name="logout")
 ]
