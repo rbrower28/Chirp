@@ -23,7 +23,6 @@ refreshing the page.
 
 * http://localhost:8000
 
-{Describe your purpose for writing this software.} -->
 
 ## Code Demonstration and Walkthrough:
 
@@ -73,14 +72,13 @@ and your username is displayed on the header.
 
 # Useful Websites
 
-<!-- {Make a list of websites that you found helpful in this project} -->
 * [Django 4.0 Documentation](https://docs.djangoproject.com/en/4.0/)
 * [TutorialsPoint Django Walkthrough](https://www.tutorialspoint.com/django/index.htm)
 * [W3Schools Django Resources](https://www.w3schools.com/django/index.php)
 
 # Future Work
 
-<!-- {Make a list of things that you need to fix, improve, and add in the future.} -->
-* Item 1
-* Item 2
-* Item 3
+* Homepage sorting buttons
+* Dynamic decoration page (on right)
+* Add 'likes'
+* Account sign up page
